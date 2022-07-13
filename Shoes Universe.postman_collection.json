@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "e9d9349d-d632-4fa6-ade4-6b840912ec07",
+		"name": "Shoes Universe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11107115"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "All products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Products}}/products",
+							"host": [
+								"{{URL_Products}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Products}}/products/11",
+							"host": [
+								"{{URL_Products}}"
+							],
+							"path": [
+								"products",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Products}}/products/13",
+							"host": [
+								"{{URL_Products}}"
+							],
+							"path": [
+								"products",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Shoes 123\",\n    \"description\": \"New Shoes 123 black\",\n    \"image\": \"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/985d233692f74f62948eaba50012752f_9366/Swift_Run_X_Shoes_Black_FY2116_01_standard.jpg\",\n    \"price\": 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Products}}/products",
+							"host": [
+								"{{URL_Products}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Shoes X\",\n    \"description\": \"New Shoes X black 22\",\n    \"image\": \"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/985d233692f74f62948eaba50012752f_9366/Swift_Run_X_Shoes_Black_FY2116_01_standard.jpg\",\n    \"price\": 145\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Products}}/products/9",
+							"host": [
+								"{{URL_Products}}"
+							],
+							"path": [
+								"products",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prices",
+			"item": [
+				{
+					"name": "All prices",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Prices}}/prices",
+							"host": [
+								"{{URL_Prices}}"
+							],
+							"path": [
+								"prices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get price",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_Prices}}/prices/8",
+							"host": [
+								"{{URL_Prices}}"
+							],
+							"path": [
+								"prices",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_Products",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		},
+		{
+			"key": "URL_Prices",
+			"value": "http://localhost:3001/api",
+			"type": "string"
+		}
+	]
+}
